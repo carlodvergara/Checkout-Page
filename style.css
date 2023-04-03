@@ -25,7 +25,6 @@ body{
     width: 100%;
     height: 100%;
     display: flex;
-
 }
 
 main{
@@ -33,7 +32,7 @@ main{
     display: flex;
     flex-direction: column;
     row-gap: 3rem;
-    width: 920px;
+    width: 110rem;
     height: 100vh;
     padding: 2rem;
 }
@@ -54,10 +53,27 @@ main{
 }
 
 
+
+
+
+
 .frame-structure{
     display: grid;
     grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    row-gap: 2rem;
 }
+
+.products{
+    order: 1;
+}
+
+.container-content{
+    order:2;
+}
+
+
+
 
 
 .products{
@@ -249,7 +265,6 @@ main{
     display: flex;
     flex-direction: column;
     row-gap: 3rem;
-    border: solid 3px red;
 }
 
 [class^="block-cont-"]{
@@ -260,7 +275,7 @@ main{
 
 [class^="block-cont-"]>h2{
     font-family: "Montserrat";
-    font-size: var(--step--1);
+    font-size: var(--step-0);
     font-weight: 600;
     line-height: 2.2rem;
     letter-spacing: 0em;
@@ -284,7 +299,7 @@ label{
 
 label>p{
     font-family: Montserrat;
-    font-size: var(--step--3);
+    font-size: var(--step--2);
     font-weight: 600;
     line-height: 15px;
     letter-spacing: 0em;
@@ -412,6 +427,7 @@ button{
     text-align: left;
     border: solid 1px #F2994A;
     text-align: center;
+    cursor: pointer;
 
 }
 
@@ -420,48 +436,44 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    font-family: Montserrat;
+    font-size: var(--step--2);
+    font-weight: 700;
+    line-height: 1.7rem;
+    letter-spacing: 0em;
+    text-align: center;
+    color:#BDBDBD;
 }
 
-/*
 
-Analsiis para modificar estructura mobile first
-.frame-structure {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-    row-gap: 2rem;
-}
 
-.info-icons {
-    order: 1;
-}
-  
-.general-info {
-    order: 2;
-}
-  
-
-@media (min-width: 820px) {
+@media (min-width: 720px) {
 
     .frame-structure {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-auto-flow: row;
         row-gap: 2rem;
+        column-gap: 3rem;
         justify-content: space-between;
     }
 
-    .info-icons {
+    .products {
       order: 2;
+      height: 53.5rem;
+      justify-self: center;
+     
+    }
+
+    .invoice{
+        margin-top: 10rem;
+    }
+
+    .container-content {
+      order: 1;
     }
 
 
-    .general-info {
-        order: 1;
-    }
-      
 
 }
-
-
-*/
